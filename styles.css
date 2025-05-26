@@ -1,14 +1,17 @@
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: url('../img/fondo.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-blend-mode: overlay;
     color: #333;
 }
 
+/* Estilos para el encabezado */
 header {
-    background: rgba(142, 68, 173, 0.8);
+    background: rgba(142, 68, 173, 0.85);
     padding: 20px;
     text-align: center;
     color: white;
@@ -37,25 +40,29 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Sección bienvenida */
 .bienvenida {
     text-align: center;
     padding: 50px;
-    background: rgba(255, 204, 188, 0.9);
+    background: rgba(255, 204, 188, 0.85);
 }
 
+/* Botones */
 button {
     background: #8e44ad;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 button:hover {
     background: #6a1b9a;
 }
 
+/* Sección de productos destacados */
 .destacados {
     text-align: center;
     padding: 50px;
@@ -66,24 +73,223 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .helados-container img {
     width: 150px;
     border-radius: 10px;
+    transition: transform 0.3s;
 }
 
+.helados-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Sección sabores */
+.sabores {
+    padding: 50px;
+    text-align: center;
+}
+
+.lista-sabores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cards generales */
+.card {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Sección contacto */
+.contacto {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card de contacto */
+.contacto-card {
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.contacto-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-card label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contacto-card input, .contacto-card textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contacto-card button {
+    background: #8e44ad;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contacto-card button:hover {
+    background: #6a1b9a;
+}
+
+/* Sección nosotros */
+.nosotros {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card grande y centrado */
+.nosotros-card {
+    background: white;
+    padding: 40px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 600px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.nosotros-card p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Efecto hover */
+.nosotros-card:hover {
+    transform: scale(1.05);
+}
+
+/* Sección FAQ */
+.faq {
+    padding: 50px;
+    text-align: center;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilos de cada pregunta */
+.faq-card {
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.faq-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.faq-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Efecto hover */
+.faq-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(142, 68, 173, 0.8);
+    background: rgba(142, 68, 173, 0.85);
     color: white;
 }
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
-    .helados-container {
+    .helados-container, .lista-sabores {
         flex-direction: column;
         align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .contacto-card {
+        width: 90%;
+    }
+
+    .nosotros-card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .nosotros-card p {
+        font-size: 16px;
+    }
+
+    .faq-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-card {
+        width: 90%;
     }
 }
