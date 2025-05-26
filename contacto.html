@@ -24,18 +24,20 @@
     <section class="contacto">
         <h2>¡Contáctanos!</h2>
         <p>Déjanos tu mensaje y nuestro equipo te responderá lo antes posible.</p>
-        <form id="contactoForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
+        <div class="card contacto-card">
+            <form id="contactoForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" rows="5" required></textarea>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="5" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
         <p id="mensajeConfirmacion" style="display:none; color: green;">¡Gracias por tu mensaje! Te responderemos pronto.</p>
     </section>
 
